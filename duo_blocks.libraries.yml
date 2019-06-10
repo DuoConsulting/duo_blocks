@@ -1,0 +1,5 @@
+blocks:
+  version: 1.0
+  css:
+    component:
+      theme/css/blocks.css: {}

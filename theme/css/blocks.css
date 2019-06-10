@@ -1,0 +1,51 @@
+/* line 4, theme/scss/_block-cta.scss */
+.block--cta h3 {
+  margin-bottom: 0;
+}
+
+/* line 8, theme/scss/_block-cta.scss */
+.block--cta .field--name-field-links {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 11, theme/scss/_block-cta.scss */
+.text-align-center .block--cta .field--name-field-links {
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* line 15, theme/scss/_block-cta.scss */
+.text-align-right .block--cta .field--name-field-links {
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+/* line 19, theme/scss/_block-cta.scss */
+.block--cta .field--name-field-links a {
+  display: block;
+  margin: 0 0.75em;
+}
+
+/* line 24, theme/scss/_block-cta.scss */
+.block--cta .field--name-field-links a:first-child {
+  margin-left: 0;
+}
+
+/* line 28, theme/scss/_block-cta.scss */
+.block--cta .field--name-field-links a:last-child {
+  margin-right: 0;
+}
+
+/* line 34, theme/scss/_block-cta.scss */
+.block--cta .field--body {
+  margin-bottom: 1.5em;
+}
+
+/* line 37, theme/scss/_block-cta.scss */
+.block--cta .field--body > *:last-child {
+  margin-bottom: 0;
+}

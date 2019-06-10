@@ -1,0 +1,25 @@
+{{ attach_library('duo_blocks/blocks') }}
+{%
+  set classes = [
+    'block',
+  ]
+%}
+<section{{ attributes.addClass(classes).addClass(extra_class) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2 {{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+
+  {% if content_attributes|length %}
+  <div {{ content_attributes }}>
+    {% endif %}
+
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+
+    {% if content_attributes|length %}
+  </div>
+  {% endif %}
+</section>

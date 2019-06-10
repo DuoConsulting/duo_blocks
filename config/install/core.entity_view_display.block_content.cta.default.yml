@@ -1,0 +1,52 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.cta
+    - field.field.block_content.cta.body
+    - field.field.block_content.cta.field_cta_title
+    - field.field.block_content.cta.field_links
+    - field.field.block_content.cta.field_text_alignment
+  module:
+    - link
+    - options
+    - text
+id: block_content.cta.default
+targetEntityType: block_content
+bundle: cta
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_cta_title:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_links:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_text_alignment:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden: {  }

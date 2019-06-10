@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for form templates.
+ */
+function duo_blocks_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  // Add block suggestions for custom block bundles.
+  if (isset($variables['elements']['content']['#block_content'])) {
+    array_splice($suggestions, 1, 0, 'block__bundle__' . $variables['elements']['content']['#block_content']->bundle());
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function duo_blocks_theme() {
+  // Indicate that we should use template files included in this module to
+  // render our block types. The templates can be overridden by a theme.
+  $module_handler = \Drupal::service('module_handler');
+  $module_path = $module_handler->getModule('duo_blocks')->getPath();
+
+  return [
+    'block__bundle__cta' => [
+      'template' => 'block--bundle--cta',
+      'base hook' => 'block',
+    ],
+    'block__bundle__text' => [
+      'template' => 'block--bundle--text',
+      'base hook' => 'block',
+    ],
+  ];
+}
