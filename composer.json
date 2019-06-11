@@ -1,0 +1,8 @@
+{
+  "name": "DuoConsulting/duo_blocks",
+  "description": "Provides custom block types.",
+  "type": "drupal-module",
+  "keywords": ["Drupal", "Blocks"],
+  "homepage": "https://www.duoconsulting.com",
+  "license": "GPL-2.0+"
+}
