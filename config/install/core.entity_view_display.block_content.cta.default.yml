@@ -19,12 +19,12 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 0
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     region: content
   field_cta_title:
-    weight: 5
+    weight: 0
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -47,6 +47,6 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    type: list_key
     region: content
 hidden: {  }

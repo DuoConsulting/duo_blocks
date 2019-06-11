@@ -11,13 +11,13 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: align-left
+      value: text-align-left
       label: Left
     -
-      value: align-right
+      value: text-align-right
       label: Right
     -
-      value: align-center
+      value: text-align-center
       label: Center
   allowed_values_function: ''
 module: options
