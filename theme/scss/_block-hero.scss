@@ -1,0 +1,96 @@
+// Heros
+//------------------------------------------------------------------------------
+$hero-height: 30rem;
+
+.block--hero {
+  @media #{$desktop} {
+    height: $hero-height;
+  }
+  display: table;
+  max-width: none;
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  height: (0.55 * $hero-height);
+
+  &:before {
+    background-color: rgba(0, 0, 0, 0.25);
+    content: ' ';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+  }
+
+  h1 {
+    color: white;
+    margin-bottom: 0;
+  }
+
+  .field--name-field-hero-subtitle {
+    color: white;
+    margin-bottom: 2em;
+  }
+
+  .field--name-field-links {
+    a {
+      background-color: black;
+      border-radius: 2em;
+      color: white;
+      display: inline-block;
+      margin: 0 0.75em;
+      padding: 0.5em 2em;
+    }
+  }
+
+  // Background images
+  .field--name-field-image {
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    img {
+      display: block;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      max-width: none;
+    }
+  }
+}
+
+.hero-content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  z-index: 20;
+}
+
+// IE doesn't support object-fit:cover, If object-fit is supported, and if we
+// are not displaying a parallax background, then hide the background image.
+html.object-fit .c-bgd-image.c-bgd-image-no-parallax {
+  background-image: none !important; // To override inline style applied by duo_components.module
+}
+
+// If object fit is not supported, or if we are using parallax, hide the image
+// field.
+html.no-object-fit .c-bgd-image .field--name-field-c-bgd-image,
+.c-bgd-image.c-bgd-image-parallax .field--name-field-c-bgd-image {
+  display: none;
+}
+// End background and text colors
+//------------------------------------------------------------------------------
+
+
+// End heros
+//------------------------------------------------------------------------------

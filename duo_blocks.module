@@ -24,6 +24,10 @@ function duo_blocks_theme() {
       'template' => 'block--bundle--cta',
       'base hook' => 'block',
     ],
+    'block__bundle__hero' => [
+      'template' => 'block--bundle--hero',
+      'base hook' => 'block',
+    ],
     'block__bundle__text' => [
       'template' => 'block--bundle--text',
       'base hook' => 'block',

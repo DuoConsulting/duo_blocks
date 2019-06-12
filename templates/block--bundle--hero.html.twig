@@ -1,0 +1,22 @@
+{{ attach_library('duo_blocks/blocks') }}
+{%
+  set classes = [
+    'block',
+  ]
+%}
+<section{{ attributes.addClass(classes).addClass('block--hero') }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+
+  {{ content.field_image }}
+
+  <div class="hero-content">
+    <div class="hero-content-container">
+      {% if label %}
+        <h1>{{ label }}</h1>
+      {% endif %}
+
+      {{ content|without('field_image') }}
+    </div>
+  </div>
+</section>

@@ -1,4 +1,8 @@
+$desktop: "only screen and (min-width:48.0625em)";
+$mobile:  "only screen and (max-width:48em)";  // < 769px
+
 @import 'block-cta';
+@import 'block-hero';
 
 // WORK IN PROGRESS
 
@@ -50,67 +54,6 @@
 // }
 // // End fields
 // //-----------------------------------------------------------------------------
-
-// // Heros
-// //------------------------------------------------------------------------------
-// .paragraph--type--c-hero {
-//   @media #{$small-up} {
-//     height: rem-calc($hero-height);  
-//   }
-//   display: table;
-//   max-width: none;
-//   width: 100%;
-//   overflow: hidden;
-//   padding: 0;
-//   position: relative;
-//   height: rem-calc(0.55 * $hero-height);
-
-//   h1 {
-//     margin-bottom: $hero-h1-margin-bottom;
-//   }
-
-//   h2 {
-//     @media #{$desktop} {
-//       font-size: rem-calc($hero-h2-font-size-lg);
-//     }
-//     font-size: rem-calc($hero-h2-font-size-sm);
-//     margin-bottom: $hero-h2-margin-bottom;
-//   }
-// }
-
-// .hero-content {
-//   display: table-cell;
-//   vertical-align: middle;
-
-//   .field {
-//     text-align: center;
-//   }
-// }
-
-// .field-name-field-c-hero-title h1 {
-//   @media #{$small-up} {
-//     margin-bottom: rem-calc(30px);
-//   }
-//   margin-bottom: rem-calc(18px);
-// }
-
-// .field-name-field-c-hero-subtitle {
-//   font-weight: 300;
-// }
-
-// .field--name-field-c-hero-cta a {
-//   @extend %button;
-// }
-
-// .field-name-field-c-hero-primary-cta,
-// .paragraphs-item-c-hero .field-name-field-c-video {
-//   @media #{$small-up} {
-//     margin-top: rem-calc(50px);
-//   }
-//   margin-top: rem-calc(30px);
-// }
-// // End heros
-// //------------------------------------------------------------------------------
 
 
 // // Video components
