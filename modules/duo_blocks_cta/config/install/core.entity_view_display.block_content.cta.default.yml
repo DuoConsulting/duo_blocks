@@ -4,9 +4,8 @@ dependencies:
   config:
     - block_content.type.cta
     - field.field.block_content.cta.body
-    - field.field.block_content.cta.field_cta_title
-    - field.field.block_content.cta.field_links
-    - field.field.block_content.cta.field_text_alignment
+    - field.field.block_content.cta.field_cta_links
+    - field.field.block_content.cta.field_cta_text_alignment
   module:
     - link
     - options
@@ -23,14 +22,7 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_cta_title:
-    weight: 0
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: basic_string
-    region: content
-  field_links:
+  field_cta_links:
     weight: 2
     label: hidden
     settings:
@@ -42,7 +34,7 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-  field_text_alignment:
+  field_cta_text_alignment:
     weight: 3
     label: hidden
     settings: {  }

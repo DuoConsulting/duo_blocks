@@ -1,0 +1,27 @@
+{{ attach_library('duo_blocks_cta/blocks-cta') }}
+{%
+  set classes = [
+    'block',
+    'block--cta',
+    content.field_cta_text_alignment.0['#markup']
+  ]
+%}
+<section{{ attributes.addClass(classes).addClass(extra_class) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h3 {{ title_attributes }}>{{ label }}</h3>
+  {% endif %}
+  {{ title_suffix }}
+
+  {% if content_attributes|length %}
+  <div {{ content_attributes }}>
+    {% endif %}
+
+    {% block content %}
+      {{ content|without('field_cta_text_alignment') }}
+    {% endblock %}
+
+    {% if content_attributes|length %}
+  </div>
+  {% endif %}
+</section>

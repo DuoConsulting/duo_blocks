@@ -4,4 +4,4 @@ dependencies: {  }
 id: cta
 label: CTA
 revision: 1
-description: 'A CTA block'
+description: 'A CTA block.'

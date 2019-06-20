@@ -1,0 +1,5 @@
+blocks-cta:
+  version: 1.0
+  css:
+    component:
+      css/blocks-cta.css: {}

@@ -3,11 +3,11 @@ status: true
 dependencies:
   config:
     - block_content.type.cta
-    - field.storage.block_content.field_links
+    - field.storage.block_content.field_cta_links
   module:
     - link
-id: block_content.cta.field_links
-field_name: field_links
+id: block_content.cta.field_cta_links
+field_name: field_cta_links
 entity_type: block_content
 bundle: cta
 label: Link(s)

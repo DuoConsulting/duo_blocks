@@ -1,0 +1,49 @@
+/* line 4, modules/duo_blocks_cta/scss/blocks-cta.scss */
+.block--cta h3 {
+  margin-bottom: 0;
+}
+
+/* line 8, modules/duo_blocks_cta/scss/blocks-cta.scss */
+.block--cta .field--body {
+  margin-bottom: 1.5em;
+}
+
+/* line 11, modules/duo_blocks_cta/scss/blocks-cta.scss */
+.block--cta .field--body > *:last-child {
+  margin-bottom: 0;
+}
+
+/* line 17, modules/duo_blocks_cta/scss/blocks-cta.scss */
+.field--name-field-cta-links {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 20, modules/duo_blocks_cta/scss/blocks-cta.scss */
+.text-align-center .field--name-field-cta-links {
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+/* line 24, modules/duo_blocks_cta/scss/blocks-cta.scss */
+.text-align-right .field--name-field-cta-links {
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+}
+
+/* line 28, modules/duo_blocks_cta/scss/blocks-cta.scss */
+.field--name-field-cta-links a {
+  display: block;
+  margin: 0 0.75em;
+  padding: 0.25em 0.5em;
+}
+
+/* line 33, modules/duo_blocks_cta/scss/blocks-cta.scss */
+.field--name-field-cta-links a:first-child {
+  margin-left: 0;
+}
+
+/* line 37, modules/duo_blocks_cta/scss/blocks-cta.scss */
+.field--name-field-cta-links a:last-child {
+  margin-right: 0;
+}

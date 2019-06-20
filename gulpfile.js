@@ -8,7 +8,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var livereload = require('gulp-livereload');
-var concat = require('gulp-concat');
+var rename = require('gulp-rename');
 
 /************************
  * CONFIGURATION
@@ -21,8 +21,10 @@ var includePaths = [
   // './node_modules/breakpoint-sass/stylesheets'
 ]
 
+var rootDir = './'; 
+
 var stylesSrc = [
-  './theme/scss/**/*.scss'
+  rootDir + '/**/scss/*.scss',
 ];
 
 /************************
@@ -42,9 +44,12 @@ gulp.task('styles', function() {
       this.emit('end');
     })
     .pipe(autoprefixer({
-      browsers: ['last 2 versions', 'iOS 7', 'ie 11']
+      browsers: ['last 2 versions', 'ie 11']
     }))
-    .pipe(gulp.dest('./theme/css'))
+    .pipe(rename(function(path) {
+        path.dirname += "/../css";
+    }))
+    .pipe(gulp.dest(rootDir))
     .pipe(livereload());
 });
 
@@ -52,7 +57,7 @@ gulp.task('watch', function() {
   if (autoReload) {
     livereload.listen();
   }
-  gulp.watch('./theme/scss/**/*.scss', ['styles']);
+  gulp.watch(stylesSrc, ['styles']);
 });
 
 gulp.task('default', ['styles']);

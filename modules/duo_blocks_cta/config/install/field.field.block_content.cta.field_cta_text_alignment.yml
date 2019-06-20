@@ -3,11 +3,11 @@ status: true
 dependencies:
   config:
     - block_content.type.cta
-    - field.storage.block_content.field_text_alignment
+    - field.storage.block_content.field_cta_text_alignment
   module:
     - options
-id: block_content.cta.field_text_alignment
-field_name: field_text_alignment
+id: block_content.cta.field_cta_text_alignment
+field_name: field_cta_text_alignment
 entity_type: block_content
 bundle: cta
 label: 'Text Alignment'
