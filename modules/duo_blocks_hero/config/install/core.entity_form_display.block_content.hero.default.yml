@@ -4,8 +4,8 @@ dependencies:
   config:
     - block_content.type.hero
     - field.field.block_content.hero.field_hero_subtitle
-    - field.field.block_content.hero.field_image
-    - field.field.block_content.hero.field_links
+    - field.field.block_content.hero.field_hero_image
+    - field.field.block_content.hero.field_hero_links
     - image.style.thumbnail
   module:
     - image
@@ -23,7 +23,7 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_image:
+  field_hero_image:
     weight: 28
     settings:
       progress_indicator: throbber
@@ -31,7 +31,7 @@ content:
     third_party_settings: {  }
     type: image_image
     region: content
-  field_links:
+  field_hero_links:
     weight: 27
     settings:
       placeholder_url: ''

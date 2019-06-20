@@ -3,11 +3,11 @@ status: true
 dependencies:
   config:
     - block_content.type.hero
-    - field.storage.block_content.field_image
+    - field.storage.block_content.field_hero_image
   module:
     - image
-id: block_content.hero.field_image
-field_name: field_image
+id: block_content.hero.field_hero_image
+field_name: field_hero_image
 entity_type: block_content
 bundle: hero
 label: 'Background Image'

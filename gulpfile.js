@@ -17,8 +17,7 @@ var rename = require('gulp-rename');
 var autoReload = true;
 
 var includePaths = [
-  // require('node-normalize-scss').includePaths,
-  // './node_modules/breakpoint-sass/stylesheets'
+  './theme/scss'
 ]
 
 var rootDir = './'; 

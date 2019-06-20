@@ -1,12 +1,13 @@
-name: 'Duo Blocks CTA'
-description: 'Installs the CTA custom block type.'
+name: 'Duo Blocks Hero'
+description: 'Installs the Hero custom block type.'
 type: module
 core: 8.x
 package: Duo
 dependencies:
   - duo_blocks
   - field
+  - file
+  - image
   - link
-  - options
   - text
 version: '1.0'

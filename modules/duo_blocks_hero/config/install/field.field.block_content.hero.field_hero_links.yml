@@ -3,11 +3,11 @@ status: true
 dependencies:
   config:
     - block_content.type.hero
-    - field.storage.block_content.field_links
+    - field.storage.block_content.field_hero_links
   module:
     - link
-id: block_content.hero.field_links
-field_name: field_links
+id: block_content.hero.field_hero_links
+field_name: field_hero_links
 entity_type: block_content
 bundle: hero
 label: Link(s)

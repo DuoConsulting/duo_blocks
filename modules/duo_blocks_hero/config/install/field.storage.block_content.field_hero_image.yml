@@ -5,8 +5,8 @@ dependencies:
     - block_content
     - file
     - image
-id: block_content.field_image
-field_name: field_image
+id: block_content.field_hero_image
+field_name: field_hero_image
 entity_type: block_content
 type: image
 settings:

@@ -9,17 +9,3 @@ function duo_blocks_theme_suggestions_block_alter(array &$suggestions, array $va
     array_splice($suggestions, 1, 0, 'block__bundle__' . $variables['elements']['content']['#block_content']->bundle());
   }
 }
-
-/**
- * Implements hook_theme().
- */
-function duo_blocks_theme() {
-  // Indicate that we should use template files included in this module to
-  // render our block types. The templates can be overridden by a theme.
-  return [
-    'block__bundle__hero' => [
-      'template' => 'block--bundle--hero',
-      'base hook' => 'block',
-    ],
-  ];
-}

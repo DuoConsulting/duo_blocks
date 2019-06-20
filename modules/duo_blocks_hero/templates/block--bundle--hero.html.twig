@@ -1,14 +1,15 @@
-{{ attach_library('duo_blocks/blocks') }}
+{{ attach_library('duo_blocks_hero/blocks-hero') }}
 {%
   set classes = [
     'block',
+    'block--hero'
   ]
 %}
-<section{{ attributes.addClass(classes).addClass('block--hero') }}>
+<section{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {{ title_suffix }}
 
-  {{ content.field_image }}
+  {{ content.field_hero_image }}
 
   <div class="hero-content">
     <div class="hero-content-container">
@@ -16,7 +17,7 @@
         <h1>{{ label }}</h1>
       {% endif %}
 
-      {{ content|without('field_image') }}
+      {{ content|without('field_hero_image') }}
     </div>
   </div>
 </section>
