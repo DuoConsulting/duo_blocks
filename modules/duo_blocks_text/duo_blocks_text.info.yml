@@ -1,0 +1,8 @@
+name: 'Duo Blocks Text'
+description: 'Installs the Text custom block type.'
+type: module
+core: 8.x
+package: Duo
+dependencies:
+  - duo_blocks
+version: '1.0'

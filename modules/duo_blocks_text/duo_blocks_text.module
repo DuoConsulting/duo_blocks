@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function duo_blocks_text_theme() {
+  // Indicate that we should use template files included in this module to
+  // render our block types. The templates can be overridden by a theme.
+  return [
+    'block__bundle__text' => [
+      'template' => 'block--bundle--text',
+      'base hook' => 'block',
+    ],
+  ];
+}
