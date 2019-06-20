@@ -4,6 +4,7 @@ type: module
 core: 8.x
 package: Duo
 dependencies:
+  - block_content
   - duo_blocks
   - field
   - file

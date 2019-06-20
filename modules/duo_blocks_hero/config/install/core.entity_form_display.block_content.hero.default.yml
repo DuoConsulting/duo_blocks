@@ -3,9 +3,9 @@ status: true
 dependencies:
   config:
     - block_content.type.hero
-    - field.field.block_content.hero.field_hero_subtitle
     - field.field.block_content.hero.field_hero_image
     - field.field.block_content.hero.field_hero_links
+    - field.field.block_content.hero.field_hero_subtitle
     - image.style.thumbnail
   module:
     - image
@@ -15,14 +15,6 @@ targetEntityType: block_content
 bundle: hero
 mode: default
 content:
-  field_hero_subtitle:
-    weight: 26
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_hero_image:
     weight: 28
     settings:
@@ -38,6 +30,14 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
+  field_hero_subtitle:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   info:
     type: string_textfield
