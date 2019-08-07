@@ -2,6 +2,7 @@ name: 'Duo Blocks Stats'
 description: 'Installs the Stats custom block type.'
 type: module
 core: 8.x
+package: Duo
 dependencies:
   - block_content
   - entity_reference_revisions
