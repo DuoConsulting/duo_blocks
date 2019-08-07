@@ -1,0 +1,51 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.stat.field_stat_icon
+    - field.field.paragraph.stat.field_stat_statistic
+    - field.field.paragraph.stat.field_stat_text
+    - field.field.paragraph.stat.field_stat_title
+    - paragraphs.paragraphs_type.stat
+  module:
+    - text
+id: paragraph.stat.default
+targetEntityType: paragraph
+bundle: stat
+mode: default
+content:
+  field_stat_icon:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_stat_statistic:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_stat_text:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_stat_title:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

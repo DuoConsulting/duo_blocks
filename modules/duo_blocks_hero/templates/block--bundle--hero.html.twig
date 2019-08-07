@@ -9,15 +9,25 @@
   {{ title_prefix }}
   {{ title_suffix }}
 
-  {{ content.field_hero_image }}
+  <div class="hero__image">
+    {{ content.field_hero_image.0 }}  
+  </div>
 
-  <div class="hero-content">
-    <div class="hero-content-container">
-      {% if label %}
-        <h1>{{ label }}</h1>
+  <div class="hero__content">
+    <div class="hero__content-container">
+      {% if content.field_hero_title|render|trim %}
+        <h1 class="hero__title">{{ content.field_hero_title.0 }}</h1>
       {% endif %}
 
-      {{ content|without('field_hero_image') }}
+      {% if content.field_hero_subtitle|render|trim %}
+        <p class="hero__subtitle">{{ content.field_hero_subtitle.0 }}</p>
+      {% endif %}
+
+      {% if content.field_hero_links|render|trim %}
+        <div class="hero__links">
+          {{ content.field_hero_links }}
+        </div>
+      {% endif %}
     </div>
   </div>
 </section>

@@ -6,6 +6,7 @@ dependencies:
     - field.field.block_content.hero.field_hero_image
     - field.field.block_content.hero.field_hero_links
     - field.field.block_content.hero.field_hero_subtitle
+    - field.field.block_content.hero.field_hero_title
   module:
     - image
     - link
@@ -15,7 +16,7 @@ bundle: hero
 mode: default
 content:
   field_hero_image:
-    weight: 2
+    weight: 3
     label: hidden
     settings:
       image_style: ''
@@ -24,7 +25,7 @@ content:
     type: image
     region: content
   field_hero_links:
-    weight: 1
+    weight: 2
     label: hidden
     settings:
       trim_length: 80
@@ -36,11 +37,17 @@ content:
     type: link
     region: content
   field_hero_subtitle:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_hero_title:
     weight: 0
     label: hidden
-    settings:
-      link_to_entity: false
+    settings: {  }
     third_party_settings: {  }
-    type: string
+    type: basic_string
     region: content
 hidden: {  }

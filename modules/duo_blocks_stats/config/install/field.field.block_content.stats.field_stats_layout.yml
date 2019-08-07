@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.stats
+    - field.storage.block_content.field_stats_layout
+  module:
+    - options
+id: block_content.stats.field_stats_layout
+field_name: field_stats_layout
+entity_type: block_content
+bundle: stats
+label: Layout
+description: 'In the Horizontal layout, each statistic is side-by-side with its title/body. In the Vertical layout, each statistic is stacked above its title/body. On smaller screens, the Vertical layout is always used.'
+required: true
+translatable: false
+default_value:
+  -
+    value: c-stats-h
+default_value_callback: ''
+settings: {  }
+field_type: list_string

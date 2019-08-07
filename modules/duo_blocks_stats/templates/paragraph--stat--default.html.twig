@@ -1,0 +1,16 @@
+<div class="statistic">
+  <div class="statistic__value">
+    {% if content.field_stat_icon.0 %}
+      <div class="statistic__icon">
+        <span class="fa fa-{{ content.field_stat_icon.0|render }}"></span> 
+      </div>
+    {% endif %}
+    <div class="statistic__statistic">
+      {{ content.field_stat_statistic }}
+    </div>
+  </div>
+  <div class="statistic__content">
+    <h3>{{ content.field_stat_title }}</h3>
+    {{ content.field_stat_text }}
+  </div>
+</div>

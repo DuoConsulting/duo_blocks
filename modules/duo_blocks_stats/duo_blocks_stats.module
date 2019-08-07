@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function duo_blocks_stats_theme() {
+  // Indicate that we should use template files included in this module to
+  // render our block types. The templates can be overridden by a theme.
+  return [
+    'block__bundle__stats' => [
+      'template' => 'block--bundle--stats',
+      'base hook' => 'block',
+    ],
+    'paragraph__stat' => [
+      'template' => 'paragraph--stat--default',
+      'base hook' => 'paragraph',
+    ],
+  ];
+}

@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.stats
+    - field.storage.block_content.field_stats_stat
+    - paragraphs.paragraphs_type.stat
+  module:
+    - entity_reference_revisions
+id: block_content.stats.field_stats_stat
+field_name: field_stats_stat
+entity_type: block_content
+bundle: stats
+label: Stats
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      stat: stat
+    target_bundles_drag_drop:
+      stat:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions

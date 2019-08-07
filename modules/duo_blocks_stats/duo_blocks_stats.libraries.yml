@@ -1,0 +1,5 @@
+blocks-stats:
+  version: 1.0
+  css:
+    component:
+      css/blocks-stats.css: {}

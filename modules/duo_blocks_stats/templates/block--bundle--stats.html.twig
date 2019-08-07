@@ -1,0 +1,20 @@
+{{ attach_library('duo_blocks_stats/blocks-stats') }}
+{%
+  set classes = [
+    'block',
+    'block--stats',
+    content.field_stats_layout.0|render
+  ]
+%}
+<section{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+
+  {{ content.body }}
+
+  {# Render the stats without all the wrapping markup. #}
+  {% set count = content.field_stats_stat['#items'].getvalue|length - 1 %}
+  {% for i in 0..count %}
+    {{ content.field_stats_stat[i] }}
+  {% endfor %}
+</section>

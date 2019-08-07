@@ -35,7 +35,7 @@ gulp.task('styles', function() {
     .pipe(sass({
       includePaths: includePaths,
       outputStyle: 'expanded',
-      sourceComments: true
+      sourceComments: false
     }))
     // Catch any SCSS errors and prevent them from crashing gulp
     .on('error', function (error) {

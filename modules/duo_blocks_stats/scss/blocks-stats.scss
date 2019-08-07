@@ -1,0 +1,167 @@
+// Stats Blocks
+//------------------------------------------------------------------------------
+@import 'variables';
+
+$stat-border: #ccc;
+$stat-padding: 4.6875rem;
+
+.block--stats + .block--stats {
+  @media #{$small-up} {
+    margin-top: $stat-padding * 0.75;
+    padding-top: $stat-padding * 0.75;
+  }
+  @media #{$medium-up} {
+    margin-top: $stat-padding;
+    padding-top: $stat-padding;
+  } 
+  border-top: 1px solid $stat-border;
+  margin-top: $stat-padding * 0.5;
+  padding-top: $stat-padding * 0.5;
+}
+
+.stats--v {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -1.25rem;
+  margin-right: -1.25rem;
+  margin-top: -1 * ($stat-padding / 2);
+  overflow: hidden; // Ensure that the negative top margin (for wrapping) does not collapse with section headings
+
+  .statistic {
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-top: $stat-padding / 2;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+// Because horizontal status use a table layout, we cannot use margins
+// to space out the stats. We have to use only padding instead.
+.stats--h .statistic {
+  @media #{$small-up} {
+    display: table-row;
+    padding-bottom: 0;
+  }
+  padding-bottom: $stat-padding * 0.5;
+
+  .statistic__statistic {
+    @media #{$small-up} {
+      padding-right: 2.5rem;
+    }
+  }
+
+  .statistic__content {
+    @media #{$small-up} {
+      display: table-cell;
+      vertical-align: top;
+    }
+  }
+
+  .statistic__value {
+    @media #{$small-up} {
+      display: table-cell;
+      margin-bottom: 0;
+      width: 35%;
+      vertical-align: top;
+    }
+  }
+
+  .statistic__value,
+  .statistic__content {
+    @media #{$small-up} {
+      padding-bottom: $stat-padding * 0.75;
+    }
+    @media #{$medium-up} {
+      padding-bottom: $stat-padding;
+    }
+  }
+
+  + .statistic {
+    @media #{$small-up} {
+      border-top: none;
+      padding-top: 0;
+    }
+    border-top: 1px solid $stat-border;
+    padding-top: $stat-padding * 0.5;
+
+    .statistic__value,
+    .statistic__content {
+      @media #{$small-up} {
+        border-top: 1px solid $stat-border;
+        padding-top: $stat-padding * 0.75;
+      }
+      @media #{$medium-up} {
+        padding-top: $stat-padding;
+      }
+    }
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+
+    .statistic__value,
+    .statistic__content {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.statistic__value {
+  line-height: 0.85;
+  margin-bottom: 2.5rem;
+
+  .statistic__icon {
+    margin-bottom: 2.5rem;
+    text-align: center;
+
+    + .statistic__statistic {
+      font-size: 0.7em;
+      text-align: center;
+    }
+  }
+}
+
+.statistic__value,
+.statistic__value .statistic__icon {
+  @media #{$medium-up} {
+    font-size: 8.75rem;
+  }
+  font-size: 5.75rem;  
+}
+
+// Styles
+.stats--bordered {
+  .statistic__icon {
+    @media #{$medium-up} {
+      font-size: 6.25rem;
+      height: 12.25rem;      
+      width: 12.25rem;
+    }
+    align-items: center;
+    border-radius: 50%;
+    border: 2px solid $stat-border;
+    display: flex;
+    font-size: 4.5rem;
+    height: 8.75rem;
+    justify-content: center;
+    margin: 0 auto;
+    width: 8.75rem;
+  }
+
+  .statistic__statistic {
+    margin-top: 2rem;
+  }
+}
+
+// TODO
+// Within a column
+// .paragraph--type--c-flexblock-column {
+//   .statistic__value,
+//   .statistic__value .statistic__icon {
+//     @media #{$medium-up} {
+//       font-size: 7rem;
+//     }
+//     font-size: 3.75rem;
+//   }
+// }

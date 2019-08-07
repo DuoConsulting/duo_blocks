@@ -1,4 +1,3 @@
-/* line 7, modules/duo_blocks_hero/scss/blocks-hero.scss */
 .block--hero {
   display: table;
   max-width: none;
@@ -10,13 +9,11 @@
 }
 
 @media only screen and (min-width: 48.0625em) {
-  /* line 7, modules/duo_blocks_hero/scss/blocks-hero.scss */
   .block--hero {
     height: 30rem;
   }
 }
 
-/* line 19, modules/duo_blocks_hero/scss/blocks-hero.scss */
 .block--hero:before {
   background-color: rgba(0, 0, 0, 0.25);
   content: ' ';
@@ -28,49 +25,7 @@
   z-index: 10;
 }
 
-/* line 30, modules/duo_blocks_hero/scss/blocks-hero.scss */
-.block--hero h1 {
-  color: white;
-  margin-bottom: 0;
-}
-
-/* line 35, modules/duo_blocks_hero/scss/blocks-hero.scss */
-.block--hero .field--name-field-hero-subtitle {
-  color: white;
-  margin-bottom: 2em;
-}
-
-/* line 41, modules/duo_blocks_hero/scss/blocks-hero.scss */
-.block--hero .field--name-field-links a {
-  background-color: black;
-  border-radius: 2em;
-  color: white;
-  display: inline-block;
-  margin: 0 0.75em;
-  padding: 0.5em 2em;
-}
-
-/* line 52, modules/duo_blocks_hero/scss/blocks-hero.scss */
-.block--hero .field--name-field-hero-image {
-  height: 100%;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-/* line 60, modules/duo_blocks_hero/scss/blocks-hero.scss */
-.block--hero .field--name-field-hero-image img {
-  display: block;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  max-width: none;
-}
-
-/* line 70, modules/duo_blocks_hero/scss/blocks-hero.scss */
-.hero-content {
+.hero__content {
   -ms-flex-align: center;
       align-items: center;
   display: -ms-flexbox;
@@ -85,13 +40,39 @@
   z-index: 20;
 }
 
-/* line 83, modules/duo_blocks_hero/scss/blocks-hero.scss */
-html.object-fit .c-bgd-image.c-bgd-image-no-parallax {
-  background-image: none !important;
+.hero__image {
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
-/* line 89, modules/duo_blocks_hero/scss/blocks-hero.scss */
-html.no-object-fit .c-bgd-image .field--name-field-c-bgd-image,
-.c-bgd-image.c-bgd-image-parallax .field--name-field-c-bgd-image {
-  display: none;
+.hero__image img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+}
+
+.hero__title {
+  color: white;
+  line-height: 1;
+  margin-bottom: 0.25em;
+}
+
+.hero__subtitle {
+  color: white;
+  margin-bottom: 2em;
+}
+
+.hero__links a {
+  background-color: black;
+  border-radius: 2em;
+  color: white;
+  display: inline-block;
+  margin: 0 0.75em;
+  padding: 0.5em 2em;
 }

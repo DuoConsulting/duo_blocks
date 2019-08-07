@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_stat_icon
+    - paragraphs.paragraphs_type.stat
+id: paragraph.stat.field_stat_icon
+field_name: field_stat_icon
+entity_type: paragraph
+bundle: stat
+label: Icon
+description: 'Select an icon from the <a href="/themes/contrib/duo_foundation/fonts/reference/fontawesome.html" target="_blank">complete list of Font Awesome icons</a>, and enter the icon code here. For example, to display the "address book" icon, enter "address-book" (without the quotes).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

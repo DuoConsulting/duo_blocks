@@ -1,0 +1,12 @@
+name: 'Duo Blocks Stats'
+description: 'Installs the Stats custom block type.'
+type: module
+core: 8.x
+dependencies:
+  - block_content
+  - entity_reference_revisions
+  - field
+  - options
+  - paragraphs
+  - text
+version: '1.0'
