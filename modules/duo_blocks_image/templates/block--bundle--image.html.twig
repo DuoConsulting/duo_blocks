@@ -1,0 +1,20 @@
+{% set extra_class = 'block--image' %}
+{% extends '@duo_blocks/block--default.html.twig' %}
+
+{% block content %}
+  {{ attach_library('duo_blocks_image/blocks-image') }}
+
+  {% if content.field_image_link|render|trim %}
+    <a href="{{ content.field_image_link.0 }}">
+  {% endif %}
+    {{ content.field_image_image.0 }}
+  {% if content.field_image_link|render|trim %}
+    </a>
+  {% endif %}
+
+  {% if content.field_image_caption|render|trim %}
+    <div class="image__caption">
+      {{ content.field_image_caption }}
+    </div>
+  {% endif %}
+{% endblock %}

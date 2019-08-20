@@ -12,14 +12,14 @@
   {{ title_suffix }}
 
   {% if content_attributes|length %}
-  <div {{ content_attributes }}>
-    {% endif %}
+    <div {{ content_attributes }}>
+  {% endif %}
 
     {% block content %}
       {{ content }}
     {% endblock %}
 
-    {% if content_attributes|length %}
-  </div>
+  {% if content_attributes|length %}
+    </div>
   {% endif %}
 </section>

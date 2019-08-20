@@ -1,0 +1,5 @@
+blocks-image:
+  version: 1.0
+  css:
+    component:
+      css/blocks-image.css: {}

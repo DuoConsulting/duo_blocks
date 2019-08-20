@@ -1,0 +1,13 @@
+name: 'Duo Blocks Image'
+description: 'Installs the Image custom block type.'
+type: module
+core: 8.x
+package: Duo
+dependencies:
+  - block_content
+  - field
+  - file
+  - image
+  - link
+  - text
+version: '1.0'
