@@ -26,7 +26,10 @@
 }
 
 .field--name-field-cta-links a {
-  display: block;
+  background-color: black;
+  border-radius: 2em;
+  color: white;
+  display: inline-block;
   margin: 0 0.75em;
   padding: 0.25em 0.5em;
 }
