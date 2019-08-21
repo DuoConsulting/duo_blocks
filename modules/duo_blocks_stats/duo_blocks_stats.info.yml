@@ -5,9 +5,9 @@ core: 8.x
 package: Duo
 dependencies:
   - block_content
+  - duo_blocks
   - entity_reference_revisions
   - field
   - options
   - paragraphs
   - text
-version: '1.0'
