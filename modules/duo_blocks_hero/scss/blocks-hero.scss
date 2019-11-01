@@ -6,7 +6,25 @@ $hero-height: 100vh;
 $hero-width: 75em;
 $hero-padding: 0.9375em;
 
+@keyframes fade-in {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slide-in {
+  0% {
+    position: relative;
+    left: -100px;
+  }
+
+  100% {
+    position: relative;
+    left: 0;
+  }
+}
+
 .block--hero {
+  animation: fade-in 500ms ease-in;
   overflow: hidden;
   position: relative;
   z-index: 0;
@@ -28,6 +46,7 @@ $hero-padding: 0.9375em;
     min-height: $hero-height;
   }
   align-items: center;
+  animation: slide-in 500ms ease-out, fade-in 500ms ease-in;
   display: flex;
   justify-content: flex-start;
   margin: 0 auto;
