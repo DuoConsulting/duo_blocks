@@ -14,5 +14,9 @@
     "gulp-livereload": "^3.8.0",
     "gulp-sass": "^3.1.0",
     "gulp-rename": "^1.4.0"
+  },
+  "scripts": {
+    "start": "gulp",
+    "watch": "gulp watch"
   }
 }

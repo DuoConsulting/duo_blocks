@@ -2,19 +2,14 @@
 //------------------------------------------------------------------------------
 @import 'variables';
 
-$hero-height: 30rem;
+$hero-height: 100vh;
+$hero-width: 75em;
+$hero-padding: 0.9375em;
 
 .block--hero {
-  @media #{$desktop} {
-    height: $hero-height;
-  }
-  display: table;
-  max-width: none;
-  width: 100%;
   overflow: hidden;
-  padding: 0;
   position: relative;
-  height: (0.55 * $hero-height);
+  z-index: 0;
 
   &:before {
     background-color: rgba(0, 0, 0, 0.25);
@@ -29,13 +24,24 @@ $hero-height: 30rem;
 }
 
 .hero__content {
+  @media #{$desktop} {
+    min-height: $hero-height;
+  }
   align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 auto;
+  max-width: $hero-width;
+  min-height: (0.55 * $hero-height);
+  padding: 10em $hero-padding;
+}
+
+.hero__content-container {
   display: flex;
   flex-direction: column;
   height: 100%;
   justify-content: center;
   position: relative;
-  text-align: center;
   z-index: 20;
 }
 
@@ -61,6 +67,7 @@ $hero-height: 30rem;
   color: white;
   line-height: 1;
   margin-bottom: 0.25em;
+  text-transform: uppercase;
 }
 
 .hero__subtitle {
@@ -69,12 +76,13 @@ $hero-height: 30rem;
 }
 
 .hero__links {
+  display: flex;
+
   a {
-    background-color: black;
-    border-radius: 2em;
-    color: white;
-    display: inline-block;
-    margin: 0 0.75em;
-    padding: 0.5em 2em;
+    margin-right: 1em;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
