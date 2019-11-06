@@ -1,3 +1,7 @@
+.block--image {
+  text-align: center;
+}
+
 .image__caption {
   margin-top: 1em;
 }

@@ -10,8 +10,10 @@
   {{ title_suffix }}
 
   {% if content.field_hero_image.0 %}
-    <div class="hero__image">
-      {{ content.field_hero_image.0 }}  
+    {# Add the rellax class with the understanding that the rellax library
+       needs to be added by the theme. #}
+    <div class="hero__image rellax">
+      {{ content.field_hero_image.0 }}
     </div>
   {% endif %}
 
