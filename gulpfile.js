@@ -14,7 +14,7 @@ var rename = require('gulp-rename');
  * CONFIGURATION
  ************************/
 
-var autoReload = true;
+var autoReload = false;
 
 var includePaths = [
   './theme/scss'
