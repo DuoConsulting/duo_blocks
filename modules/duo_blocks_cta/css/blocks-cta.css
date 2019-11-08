@@ -2,33 +2,33 @@
   margin-bottom: 0;
 }
 
-.block--cta .field--name-body {
-  margin-bottom: 1.5em;
-}
-
 .block--cta .field--name-body > *:last-child {
   margin-bottom: 0;
 }
 
-.cta-links {
+.cta__body {
+  margin-bottom: 1.5em;
+}
+
+.cta__links {
   display: -ms-flexbox;
   display: flex;
 }
 
-.text-align-center .cta-links {
+.text-align-center .cta__links {
   -ms-flex-pack: center;
       justify-content: center;
 }
 
-.text-align-right .cta-links {
+.text-align-right .cta__links {
   -ms-flex-pack: end;
       justify-content: flex-end;
 }
 
-.cta-links a {
+.cta__links a {
   margin-right: 1em;
 }
 
-.cta-links a:last-child {
+.cta__links a:last-child {
   margin-right: 0;
 }

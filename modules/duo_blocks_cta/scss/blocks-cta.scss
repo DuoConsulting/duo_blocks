@@ -6,15 +6,17 @@
   }
 
   .field--name-body {
-    margin-bottom: 1.5em;
-
     > *:last-child {
       margin-bottom: 0;
-    }
+    } 
   }
 }
 
-.cta-links {
+.cta__body {
+  margin-bottom: 1.5em; 
+}
+
+.cta__links {
   display: flex;
 
   .text-align-center & {
