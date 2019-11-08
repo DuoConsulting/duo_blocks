@@ -3,6 +3,7 @@
   set classes = [
     'block',
     'block--cta',
+    'cta',
     content.field_cta_text_alignment.0['#markup']
   ]
 %}
@@ -13,15 +14,21 @@
   {% endif %}
   {{ title_suffix }}
 
-  {% if content_attributes|length %}
-  <div {{ content_attributes }}>
+  <div class="cta__container">
+    {% if content.body.0 %}
+      <div class="cta__body">
+        {{ content.body }}
+      </div>
     {% endif %}
 
-    {% block content %}
-      {{ content|without('field_cta_text_alignment') }}
-    {% endblock %}
+    {% if content.field_cta_links.0 %}
+      {% set count = content.field_cta_links['#items']|length - 1 %}
 
-    {% if content_attributes|length %}
+      <div class="cta__links">
+        {% for i in 0..count %}
+          {{ content.field_cta_links[i] }}
+        {% endfor %}
+      </div>
+    {% endif %}
   </div>
-  {% endif %}
 </section>

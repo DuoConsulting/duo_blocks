@@ -17,7 +17,7 @@ function duo_blocks_hero_theme() {
 /**
  * Implements hook_preprocess_hook().
  */
-function duo_blocks_preprocess_block(&$variables, $hook) {
+function duo_blocks_hero_preprocess_block(&$variables, $hook) {
   if (isset($variables['derivative_plugin_id']) &&
       $variables['derivative_plugin_id'] == 'hero') {
     // Though we don't define any styles for the .button class in this module,

@@ -2,42 +2,33 @@
   margin-bottom: 0;
 }
 
-.block--cta .field--body {
+.block--cta .field--name-body {
   margin-bottom: 1.5em;
 }
 
-.block--cta .field--body > *:last-child {
+.block--cta .field--name-body > *:last-child {
   margin-bottom: 0;
 }
 
-.field--name-field-cta-links {
+.cta-links {
   display: -ms-flexbox;
   display: flex;
 }
 
-.text-align-center .field--name-field-cta-links {
+.text-align-center .cta-links {
   -ms-flex-pack: center;
       justify-content: center;
 }
 
-.text-align-right .field--name-field-cta-links {
+.text-align-right .cta-links {
   -ms-flex-pack: end;
       justify-content: flex-end;
 }
 
-.field--name-field-cta-links a {
-  background-color: black;
-  border-radius: 2em;
-  color: white;
-  display: inline-block;
-  margin: 0 0.75em;
-  padding: 0.5em 2em;
+.cta-links a {
+  margin-right: 1em;
 }
 
-.field--name-field-cta-links a:first-child {
-  margin-left: 0;
-}
-
-.field--name-field-cta-links a:last-child {
+.cta-links a:last-child {
   margin-right: 0;
 }
