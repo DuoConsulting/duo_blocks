@@ -6,11 +6,13 @@
       </div>
     {% endif %}
     <div class="statistic__statistic">
-      {{ content.field_stat_statistic }}
+      {{ content.field_stat_statistic.0 }}
     </div>
   </div>
   <div class="statistic__content">
-    <h3>{{ content.field_stat_title }}</h3>
-    {{ content.field_stat_text }}
+    <h3 class="statistic__title">{{ content.field_stat_title.0 }}</h3>
+    <div class="statistic__text">
+      {{ content.field_stat_text }}  
+    </div>
   </div>
 </div>

@@ -2,7 +2,7 @@
 //------------------------------------------------------------------------------
 @import 'variables';
 
-$stat-border: #ccc;
+$stat-border: currentColor;
 $stat-padding: 4.6875rem;
 
 .block--stats + .block--stats {
@@ -28,7 +28,10 @@ $stat-padding: 4.6875rem;
   overflow: hidden; // Ensure that the negative top margin (for wrapping) does not collapse with section headings
 
   .statistic {
-    flex-basis: 25%;
+    @media #{$small-up} {
+      flex-basis: 25%;  
+    }
+    flex-basis: 100%;
     flex-grow: 1;
     margin-top: $stat-padding / 2;
     padding-left: 1.25rem;

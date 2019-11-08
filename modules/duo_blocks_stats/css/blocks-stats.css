@@ -1,5 +1,5 @@
 .block--stats + .block--stats {
-  border-top: 1px solid #ccc;
+  border-top: 1px solid currentColor;
   margin-top: 2.34375rem;
   padding-top: 2.34375rem;
 }
@@ -30,13 +30,20 @@
 }
 
 .stats--v .statistic {
-  -ms-flex-preferred-size: 25%;
-      flex-basis: 25%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
   -ms-flex-positive: 1;
       flex-grow: 1;
   margin-top: 2.34375rem;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
+}
+
+@media only screen and (min-width: 48.0625em) {
+  .stats--v .statistic {
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+  }
 }
 
 .stats--h .statistic {
@@ -87,7 +94,7 @@
 }
 
 .stats--h .statistic + .statistic {
-  border-top: 1px solid #ccc;
+  border-top: 1px solid currentColor;
   padding-top: 2.34375rem;
 }
 
@@ -101,7 +108,7 @@
 @media only screen and (min-width: 48.0625em) {
   .stats--h .statistic + .statistic .statistic__value,
   .stats--h .statistic + .statistic .statistic__content {
-    border-top: 1px solid #ccc;
+    border-top: 1px solid currentColor;
     padding-top: 3.51562rem;
   }
 }
@@ -153,7 +160,7 @@
   -ms-flex-align: center;
       align-items: center;
   border-radius: 50%;
-  border: 2px solid #ccc;
+  border: 2px solid currentColor;
   display: -ms-flexbox;
   display: flex;
   font-size: 4.5rem;
