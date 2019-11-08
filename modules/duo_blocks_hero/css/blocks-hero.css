@@ -89,12 +89,24 @@
   color: white;
   line-height: 1;
   margin-bottom: 0.25em;
+  text-shadow: #444 1px 1px 3px;
   text-transform: uppercase;
 }
 
 .hero__subtitle {
   color: white;
-  margin-bottom: 2em;
+  font-size: 1em;
+  letter-spacing: -0.25px;
+  line-height: 1.2;
+  margin-bottom: 3em;
+  text-shadow: #444 1px 1px 3px;
+}
+
+@media only screen and (min-width: 48.0625em) {
+  .hero__subtitle {
+    font-size: 1.5em;
+    max-width: 50%;
+  }
 }
 
 .hero__links {

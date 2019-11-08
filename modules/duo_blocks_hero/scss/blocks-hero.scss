@@ -5,6 +5,7 @@
 $hero-height: 100vh;
 $hero-width: 75em;
 $hero-padding: 0.9375em;
+$hero-shadow: #444;
 
 @keyframes fade-in {
   0%   { opacity: 0; }
@@ -86,12 +87,21 @@ $hero-padding: 0.9375em;
   color: white;
   line-height: 1;
   margin-bottom: 0.25em;
+  text-shadow: $hero-shadow 1px 1px 3px;
   text-transform: uppercase;
 }
 
 .hero__subtitle {
+  @media #{$desktop} {
+    font-size: 1.5em;
+    max-width: 50%;
+  }
   color: white;
-  margin-bottom: 2em;
+  font-size: 1em;
+  letter-spacing: -0.25px;
+  line-height: 1.2;
+  margin-bottom: 3em;
+  text-shadow: $hero-shadow 1px 1px 3px;
 }
 
 .hero__links {
