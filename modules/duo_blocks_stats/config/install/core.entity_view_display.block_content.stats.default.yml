@@ -16,19 +16,25 @@ mode: default
 content:
   field_stats_layout:
     type: list_key
-    weight: 2
+    weight: 1
     region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }
   field_stats_stat:
     type: entity_reference_revisions_entity_view
-    weight: 1
+    weight: 0
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
     region: content
-hidden:
-  field_stats_style: true
+  field_stats_style:
+    type: list_key
+    weight: 2
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }
