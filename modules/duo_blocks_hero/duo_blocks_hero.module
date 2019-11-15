@@ -23,11 +23,13 @@ function duo_blocks_hero_preprocess_block(&$variables, $hook) {
     // Though we don't define any styles for the .button class in this module,
     // let's go ahead and add that class, assuming that the front-end theme can
     // use it.
-    $links = $variables['content']['field_hero_links']['#items'];
-    $links_count = $links->count();
+    if (isset($variables['content']['field_hero_links']['#items'])) {
+      $links = $variables['content']['field_hero_links']['#items'];
+      $links_count = $links->count();
 
-    for ($i = 0; $i < $links_count; $i++) {
-      $variables['content']['field_hero_links'][$i]['#options']['attributes']['class'][] = 'button';
+      for ($i = 0; $i < $links_count; $i++) {
+        $variables['content']['field_hero_links'][$i]['#options']['attributes']['class'][] = 'button';
+      }      
     }
   }
 }
