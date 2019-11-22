@@ -1,0 +1,11 @@
+name: 'Duo Blocks Media'
+description: 'Installs the Media custom block type.'
+type: module
+core: 8.x
+package: Duo
+dependencies:
+  - block_content
+  - duo_blocks
+  - field
+  - media
+  - media_library

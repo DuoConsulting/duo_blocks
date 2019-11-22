@@ -1,0 +1,16 @@
+{% set extra_class = 'block--media media' %}
+{% extends '@duo_blocks/block--default.html.twig' %}
+
+{% block content %}
+  {{ attach_library('duo_blocks_media/blocks-media') }}
+
+  {% if content.field_media_media.0 %}
+    {% set count = content.field_media_media['#items']|length - 1 %}
+
+    {% for i in 0..count %}
+      <div class="media__item">
+        {{ content.field_media_media[i] }}
+      </div>
+    {% endfor %}
+  {% endif %}
+{% endblock %}

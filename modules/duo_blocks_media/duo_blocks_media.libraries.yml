@@ -1,0 +1,5 @@
+blocks-media:
+  version: 1.0
+  css:
+    component:
+      css/blocks-media.css: {}
