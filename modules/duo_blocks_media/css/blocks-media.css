@@ -29,3 +29,9 @@
   width: 100%;
   height: 100%;
 }
+
+.media-type-local_video video {
+  height: auto;
+  max-width: 39.0625rem;
+  width: 100%;
+}
