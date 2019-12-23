@@ -9,3 +9,4 @@ dependencies:
   - field
   - media
   - media_library
+core_incompatible: false

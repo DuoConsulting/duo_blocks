@@ -10,3 +10,4 @@ dependencies:
   - link
   - options
   - text
+core_incompatible: false

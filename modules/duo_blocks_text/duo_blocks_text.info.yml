@@ -8,3 +8,4 @@ dependencies:
   - duo_blocks
   - field
   - text
+core_incompatible: false
