@@ -1,0 +1,19 @@
+{{ attach_library('duo_blocks_accordion/blocks-accordion') }}
+{%
+  set classes = [
+    'block',
+    'block--accordion',
+    'accordion',
+    'js-accordion'
+  ]
+%}
+<section{{ attributes.addClass(classes) }} data-accordion-prefix-classes="simple-accordion">
+  {{ title_prefix }}
+  {{ title_suffix }}
+
+  {# Render the accordion items without all the wrapping markup. #}
+  {% set count = content.field_accordion_items['#items'].getvalue|length - 1 %}
+  {% for i in 0..count %}
+    {{ content.field_accordion_items[i] }}
+  {% endfor %}
+</section>

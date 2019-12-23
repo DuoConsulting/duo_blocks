@@ -1,0 +1,10 @@
+name: 'Duo Blocks Accordion'
+description: 'Installs the Accordion custom block type.'
+type: module
+core: 8.x
+dependencies:
+  - block_content
+  - entity_reference_revisions
+  - field
+  - paragraphs
+  - text

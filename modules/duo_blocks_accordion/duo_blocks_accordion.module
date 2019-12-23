@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function duo_blocks_accordion_theme() {
+  // Indicate that we should use template files included in this module to
+  // render our block types. The templates can be overridden by a theme.
+  return [
+    'block__bundle__accordion' => [
+      'template' => 'block--bundle--accordion',
+      'base hook' => 'block',
+    ],
+    'paragraph__accordion_item' => [
+      'template' => 'paragraph--accordion-item--default',
+      'base hook' => 'paragraph',
+    ],
+  ];
+}
