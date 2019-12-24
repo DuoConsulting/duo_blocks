@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.accordion
+    - field.storage.block_content.field_accordion_format
+  module:
+    - options
+id: block_content.accordion.field_accordion_format
+field_name: field_accordion_format
+entity_type: block_content
+bundle: accordion
+label: Format
+description: 'Content is always be displayed in accordion format on small screens.'
+required: true
+translatable: false
+default_value:
+  -
+    value: accordion
+default_value_callback: ''
+settings: {  }
+field_type: list_string

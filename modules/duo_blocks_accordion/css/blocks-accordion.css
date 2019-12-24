@@ -1,3 +1,97 @@
+.accordion--tabs .accordion__tabs {
+  display: none;
+}
+
+@media only screen and (min-width: 48.0625em) {
+  .accordion--tabs .accordion__tabs {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 48.0625em) {
+  .accordion--tabs .accordion__accordion {
+    display: none;
+  }
+}
+
+.invisible {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.js-tabcontent[aria-hidden="true"] {
+  display: none;
+}
+
+.tabs__tabcontent:focus {
+  outline: 1px dotted;
+}
+
+.tabs__standard_ul {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  margin: 0 0 2em;
+  padding: 0;
+  width: 100%;
+}
+
+.tabs__standard__li {
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 16px;
+  margin: 0;
+  text-align: center;
+}
+
+.tabs__standard__li:last-child .tabs__standard__a {
+  margin-right: 0;
+}
+
+.tabs__standard__a {
+  -ms-flex-align: center;
+      align-items: center;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  font-weight: normal;
+  -ms-flex-pack: center;
+      justify-content: center;
+  line-height: 1.1;
+  opacity: 0.5;
+  padding: 12px 0;
+  margin-right: 12px;
+}
+
+.tabs__standard__a:focus,
+.tabs__standard__a:hover,
+.tabs__standard__a:active,
+.tabs__standard__a[aria-selected="true"] {
+  opacity: 1;
+}
+
+.tabs__standard__a:focus {
+  outline: 1px solid transparent;
+}
+
+.tabs__standard__tabcontent + .tabs__standard__tabcontent {
+  margin-top: rem(20px);
+}
+
+.tabs__standard__tabcontent + .tabs__standard__tabcontent[role="tabpanel"] {
+  margin-top: 0;
+}
+
 .simple-accordion__panel[aria-hidden=true] {
   display: none;
 }

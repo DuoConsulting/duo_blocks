@@ -7,3 +7,10 @@ blocks-accordion:
     js/accordion.js: {}
   dependencies:
     - core/jquery
+
+blocks-tabs:
+  version: 1.0
+  js:
+    js/tabs.js: {}
+  dependencies:
+    - duo_blocks_accordion/blocks-accordion

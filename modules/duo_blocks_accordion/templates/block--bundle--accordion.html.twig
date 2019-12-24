@@ -1,19 +1,46 @@
 {{ attach_library('duo_blocks_accordion/blocks-accordion') }}
 {%
+  set format = content.field_accordion_format.0|render
+%}
+{%
   set classes = [
     'block',
     'block--accordion',
     'accordion',
-    'js-accordion'
+    'accordion--' ~ format
   ]
 %}
-<section{{ attributes.addClass(classes) }} data-accordion-prefix-classes="simple-accordion">
+<section{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
+  {% if label %}
+    <h3 {{ title_attributes }}>{{ label }}</h3>
+  {% endif %}
   {{ title_suffix }}
 
-  {# Render the accordion items without all the wrapping markup. #}
-  {% set count = content.field_accordion_items['#items'].getvalue|length - 1 %}
-  {% for i in 0..count %}
-    {{ content.field_accordion_items[i] }}
-  {% endfor %}
+  {% if format == 'tabs' %}
+    {{ attach_library('duo_blocks_accordion/blocks-tabs') }}
+    <div class="accordion__tabs js-tabs">
+      <ul class="js-tablist tabs__standard_ul" data-existing-hx="h4">
+        {% for key, tab in tabs %}
+          <li class="js-tablist__item tabs__standard__li">
+             <a href="#tab_{{ id }}_{{ key }}" id="label_tab_{{ id }}_{{ key }}" class="js-tablist__link tabs__standard__a">{{ tab.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+      {% for key, tab in tabs %}
+        <div id="tab_{{ id }}_{{ key }}" class="js-tabcontent tabs__standard__tabcontent">
+          <h4>{{ tab.title }}</h4>
+          {{ tab.content }}
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  <div class="accordion__accordion js-accordion" data-accordion-prefix-classes="simple-accordion">
+    {# Render the accordion items without all the wrapping markup. #}
+    {% set count = content.field_accordion_items['#items'].getvalue|length - 1 %}
+    {% for i in 0..count %}
+      {{ content.field_accordion_items[i] }}
+    {% endfor %}
+  </div>
 </section>

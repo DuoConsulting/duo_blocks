@@ -17,3 +17,31 @@ function duo_blocks_accordion_theme() {
     ],
   ];
 }
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+function duo_blocks_accordion_preprocess_block(&$variables, $hook) {
+  if (isset($variables['derivative_plugin_id']) &&
+      $variables['derivative_plugin_id'] == 'accordion') {
+    $block = $variables['elements']['content']['#block_content'];
+
+    // Create a "tabs" variable to simplify output of tabbed content in the
+    // template file.
+    if (
+      $block->hasField('field_accordion_items') &&
+      !$block->field_accordion_items->isEmpty()
+    ) {
+      $entities = $block->field_accordion_items->referencedEntities();
+      $variables['id'] = $block->id();
+      $variables['tabs'] = [];
+    
+      foreach ($entities as $key => $entity) {
+        if (isset($entity->field_accordion_item_title) && isset($entity->field_accordion_item_content)) {
+          $variables['tabs'][$key]['title'] = $entity->field_accordion_item_title->view('default');
+          $variables['tabs'][$key]['content'] = $entity->field_accordion_item_content->view('default');          
+        }
+      }
+    }
+  }
+}

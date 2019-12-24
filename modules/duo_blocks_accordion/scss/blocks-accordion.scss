@@ -1,3 +1,101 @@
+// Accordions and Tabs
+
+@import 'variables';
+
+.accordion--tabs {
+  .accordion__tabs {
+    @media #{$small-up} {
+      display: block;
+    }
+    display: none;
+  }
+
+  .accordion__accordion {
+    @media #{$small-up} {
+      display: none;
+    }
+  }
+}
+
+// Tab styles.
+$tabs-border-color: #ccc;
+
+.invisible { // This class is assigned to the headers by the script
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.js-tabcontent[aria-hidden="true"] {
+  display: none;
+}
+ 
+.tabs__tabcontent:focus {
+  outline: 1px dotted;
+}
+
+.tabs__standard_ul {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 0 2em;
+  padding: 0;
+  width: 100%;
+}
+
+.tabs__standard__li {
+  display: flex;
+  font-size: 16px;
+  margin: 0;
+  text-align: center;
+
+  &:last-child {
+    .tabs__standard__a {
+      margin-right: 0;
+    }
+  }
+}
+
+.tabs__standard__a {
+  align-items: center;
+  border-bottom: 1px solid $tabs-border-color;
+  cursor: pointer;
+  display: flex;
+  flex-grow: 1;
+  font-weight: normal;
+  justify-content: center;
+  line-height: 1.1;
+  opacity: 0.5;
+  padding: 12px 0;
+  margin-right: 12px;
+}
+
+.tabs__standard__a:focus,
+.tabs__standard__a:hover,
+.tabs__standard__a:active,
+.tabs__standard__a[aria-selected="true"] {
+  opacity: 1;
+}
+
+.tabs__standard__a:focus {
+  outline: 1px solid transparent;
+}
+
+.tabs__standard__tabcontent {
+  + .tabs__standard__tabcontent {
+    margin-top: rem(20px);
+
+    &[role="tabpanel"] {
+      margin-top: 0; // When JS is enabled, no top margin.
+    }
+  }
+}
+
+// Accordion styles.
 .simple-accordion__panel[aria-hidden=true] {
   display: none;
 }

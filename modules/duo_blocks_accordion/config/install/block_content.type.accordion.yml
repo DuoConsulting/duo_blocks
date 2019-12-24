@@ -2,6 +2,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: accordion
-label: Accordion
+label: Accordion/Tabs
 revision: 1
-description: 'A block with content in an accordion format.'
+description: 'A block with content in either an accordion or tabbed format.'

@@ -1,5 +1,5 @@
 name: 'Duo Blocks Accordion'
-description: 'Installs the Accordion custom block type.'
+description: 'Installs the Accordion/Tabs custom block type.'
 type: module
 core: 8.x
 package: Duo
@@ -7,5 +7,7 @@ dependencies:
   - block_content
   - entity_reference_revisions
   - field
+  - options
   - paragraphs
   - text
+core_incompatible: false
