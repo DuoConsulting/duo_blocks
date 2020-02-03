@@ -16,7 +16,7 @@
   max-width: 39.0625rem;
   width: 100%;
 
-  > .field {
+  > .field--name-field-media-oembed-video {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 */
     height: 0;
@@ -32,9 +32,15 @@
 }
 
 .media-type-local_video {
+  max-width: 39.0625rem;
+
   video {
     height: auto;
-    max-width: 39.0625rem;
     width: 100%;    
   }
+}
+
+.field--name-field-media-caption {
+  font-size: 0.9em;
+  margin-top: 1em;
 }

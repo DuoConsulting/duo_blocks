@@ -1,1 +1,23 @@
-required: true
+required:
+  - core.entity_form_display.media.image.default
+  - core.entity_form_display.media.image.media_library
+  - core.entity_form_display.media.local_video.default
+  - core.entity_form_display.media.local_video.media_library
+  - core.entity_form_display.media.remote_video.default
+  - core.entity_form_display.media.remote_video.media_library
+  - core.entity_view_display.media.image.default
+  - core.entity_view_display.media.image.media_library
+  - core.entity_view_display.media.local_video.default
+  - core.entity_view_display.media.local_video.media_library
+  - core.entity_view_display.media.remote_video.default
+  - core.entity_view_display.media.remote_video.media_library
+  - field.field.media.image.field_media_caption
+  - field.field.media.image.field_media_image
+  - field.field.media.local_video.field_media_caption
+  - field.field.media.local_video.field_media_video_file
+  - field.field.media.remote_video.field_media_caption
+  - field.field.media.remote_video.field_media_oembed_video
+  - field.storage.media.field_media_caption
+  - field.storage.media.field_media_image
+  - field.storage.media.field_media_oembed_video
+  - field.storage.media.field_media_video_file

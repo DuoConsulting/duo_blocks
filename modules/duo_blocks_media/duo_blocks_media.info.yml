@@ -7,6 +7,9 @@ dependencies:
   - block_content
   - duo_blocks
   - field
+  - file
+  - image
   - media
   - media_library
+  - text
 core_incompatible: false

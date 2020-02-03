@@ -1,0 +1,41 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.local_video.field_media_caption
+    - field.field.media.local_video.field_media_video_file
+    - media.type.local_video
+  module:
+    - file
+    - text
+id: media.local_video.default
+targetEntityType: media
+bundle: local_video
+mode: default
+content:
+  field_media_caption:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_media_video_file:
+    type: file_video
+    label: hidden
+    weight: 0
+    settings:
+      controls: true
+      multiple_file_display_type: tags
+      width: 640
+      height: 480
+      autoplay: false
+      loop: false
+      muted: false
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true
