@@ -3,5 +3,5 @@ status: true
 dependencies: {  }
 id: slide
 label: Slide
-revision: 0
+revision: 1
 description: 'A single slide to be added to slideshows'

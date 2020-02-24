@@ -8,3 +8,4 @@ dependencies:
   - media
   - media_library
   - text
+core_incompatible: false
