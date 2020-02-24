@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.slide
+    - block_content.type.slideshow
+    - field.storage.block_content.field_slideshow_slide
+id: block_content.slideshow.field_slideshow_slide
+field_name: field_slideshow_slide
+entity_type: block_content
+bundle: slideshow
+label: Slide
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings:
+    target_bundles:
+      slide: slide
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
