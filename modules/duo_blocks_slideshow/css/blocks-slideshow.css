@@ -23,10 +23,6 @@
   color: #fff;
 }
 
-.slideshow div[class^="slick-"] figcaption p {
-  font-size: 14px;
-}
-
 .slideshow div[class^="slick-"] figcaption p:last-of-type {
   margin-bottom: 0;
 }

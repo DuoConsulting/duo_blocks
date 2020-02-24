@@ -50,7 +50,6 @@
         // All slides same height.
         .on('setPosition', function (event, slick) {
           slick.$slides.css('height', slick.$slideTrack.height() + 'px');
-          console.log("bo");
         });
     }
   };
