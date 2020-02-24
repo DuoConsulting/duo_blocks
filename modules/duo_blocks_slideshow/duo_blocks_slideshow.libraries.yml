@@ -1,0 +1,12 @@
+blocks-slideshow:
+  version: 1.0
+  css:
+    component:
+      js/vendors/slick/slick.css: {}
+      js/vendors/slick/slick-theme.css: {}
+      css/blocks-slideshow.css: {}
+  js:
+    js/vendors/slick/slick.min.js: {}
+    js/slideshow.js: {}
+  dependencies:
+    - core/jquery

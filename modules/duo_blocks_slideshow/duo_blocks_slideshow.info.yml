@@ -1,0 +1,11 @@
+name: 'Duo Blocks Slideshow'
+description: 'Installs the slideshow and slide block types.'
+type: module
+core: 8.x
+dependencies:
+  - block_content
+  - field
+  - media
+  - media_library
+  - text
+core_incompatible: false
