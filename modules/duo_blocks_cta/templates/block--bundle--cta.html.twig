@@ -7,7 +7,7 @@
     content.field_cta_text_alignment.0['#markup']
   ]
 %}
-<section{{ attributes.addClass(classes) }}>
+<div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {% if label %}
     <h3 {{ title_attributes }}>{{ label }}</h3>
@@ -31,4 +31,4 @@
       </div>
     {% endif %}
   </div>
-</section>
+</div>

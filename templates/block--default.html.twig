@@ -4,7 +4,7 @@
     'block',
   ]
 %}
-<section{{ attributes.addClass(classes).addClass(extra_class) }}>
+<div{{ attributes.addClass(classes).addClass(extra_class) }}>
   {{ title_prefix }}
   {% if label %}
     <h3 {{ title_attributes }}>{{ label }}</h3>
@@ -22,4 +22,4 @@
   {% if content_attributes|length %}
     </div>
   {% endif %}
-</section>
+</div>
