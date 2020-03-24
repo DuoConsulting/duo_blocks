@@ -1,0 +1,12 @@
+blocks-card-group:
+  version: 1.0
+  css:
+    component:
+      css/blocks-card-group.css: {}
+blocks-card-group-slick:
+  version: 1.0
+  js:
+    js/card-group.js: {}
+  dependencies:
+    - core/jquery
+    - duo_blocks/slick
