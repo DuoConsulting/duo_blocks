@@ -24,9 +24,10 @@ function duo_blocks_cta_preprocess_block(&$variables, $hook) {
     // let's go ahead and add that class, assuming that the front-end theme can
     // use it.
 
-  if (!empty($variables['content']['field_cta_links']['#items'])) {
-    $links = $variables['content']['field_cta_links']['#items'];
-    $links_count = $links->count();
+    // Make sure the link field has value, otherwise it breaks the page.
+    if (!empty($variables['content']['field_cta_links']['#items'])) {
+      $links = $variables['content']['field_cta_links']['#items'];
+      $links_count = $links->count();
 
       for ($i = 0; $i < $links_count; $i++) {
         $variables['content']['field_cta_links'][$i]['#options']['attributes']['class'][] = 'button';
