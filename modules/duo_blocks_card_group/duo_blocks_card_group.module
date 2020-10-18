@@ -1,0 +1,41 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function duo_blocks_card_group_theme() {
+  // Indicate that we should use template files included in this module to
+  // render our block types. The templates can be overridden by a theme.
+  return [
+    'block__bundle__card_group' => [
+      'template' => 'block--bundle--card-group',
+      'base hook' => 'block',
+    ],
+    'paragraph__card' => [
+      'template' => 'paragraph--card--default',
+      'base hook' => 'paragraph',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_preprocess_hook().
+ */
+function duo_blocks_card_group_preprocess_block(&$variables, $hook) {
+  if (isset($variables['derivative_plugin_id']) &&
+    $variables['derivative_plugin_id'] == 'card_group') {
+    $variables['card_size'] = 'card-size-3';
+
+    if (isset($variables['content']['field_card_group_card']['#items'])) {
+      $card_count = count($variables['content']['field_card_group_card']['#items']);
+
+      if ($card_count <= 2) {
+        $variables['card_size'] = 'card-size-6';
+      } elseif ($card_count == 3) {
+        $variables['card_size'] = 'card-size-4';
+      } elseif ($card_count == 4) {
+        $variables['card_size'] = 'card-size-3';
+      }
+    }
+  }
+}

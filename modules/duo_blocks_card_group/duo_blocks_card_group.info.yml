@@ -1,0 +1,16 @@
+name: 'Duo Blocks Card Group'
+description: 'Installs the Card Group custom block type'
+type: module
+core: 8.x
+package: Duo
+dependencies:
+  - block_content
+  - entity_reference_revisions
+  - field
+  - image
+  - link
+  - media
+  - media_library
+  - paragraphs
+  - text
+core_incompatible: false

@@ -1,0 +1,28 @@
+{{ attach_library('duo_blocks_card_group/blocks-card-group') }}
+<div class="card">
+  {% if content.field_card_image.0 %}
+    <div class="card__image">
+      {{ content.field_card_image.0 }}
+    </div>
+  {% endif %}
+
+  <div class="card__cta">
+    <div class="card__cta-text">
+      {% if content.field_card_title.0 %}
+        <h3 class="card__cta-text-title">{{ content.field_card_title.0 }}</h3>
+      {% endif %}
+
+      <div class="card__cta-text-body">
+        {{ content.field_card_text.0 }}
+      </div>
+    </div>
+
+    {% if content.field_card_link.0 %}
+      <div class="card__cta-link cta__link">
+        <div class="cta__link-inner">
+          {{ content.field_card_link.0 }}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</div>

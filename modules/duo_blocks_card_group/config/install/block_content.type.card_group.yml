@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: card_group
+label: 'Card Group'
+revision: 1
+description: 'A collection of cards'
