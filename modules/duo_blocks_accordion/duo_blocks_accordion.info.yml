@@ -2,6 +2,7 @@ name: 'Duo Blocks Accordion'
 description: 'Installs the Accordion/Tabs custom block type.'
 type: module
 core: 8.x
+core_version_requirement: ^8 || ^9
 package: Duo
 dependencies:
   - block_content
