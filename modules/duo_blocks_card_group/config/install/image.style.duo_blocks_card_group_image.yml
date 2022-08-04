@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: duo_blocks_card_group_image
+label: 'Duo Blocks Card Group Image'
+effects:
+  27373ecd-d7f9-4af0-b10b-4a17f315bf7b:
+    uuid: 27373ecd-d7f9-4af0-b10b-4a17f315bf7b
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 480
+      height: 360
+      anchor: center-center

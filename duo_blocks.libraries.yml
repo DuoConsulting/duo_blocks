@@ -3,3 +3,11 @@ blocks:
   css:
     component:
       theme/css/blocks.css: {}
+slick:
+  css:
+    component:
+      theme/js/vendors/slick/slick.css: {}
+      theme/js/vendors/slick/slick-theme.css: {}
+  js:
+    theme/js/vendors/slick/slick.min.js: {}
+

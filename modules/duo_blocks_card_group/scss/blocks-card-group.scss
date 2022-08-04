@@ -1,0 +1,93 @@
+// Card
+//
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0 0.5rem;
+}
+
+.card-group__cards {
+  display: flex;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+
+.card__image {
+  padding-bottom: 66%;
+  position: relative;
+  overflow: hidden;
+  background-color: lightgray;
+
+  img {
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+  }
+}
+
+.card__cta {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 1rem;
+  background-color: lightgray;
+}
+
+.card__cta-link {
+  margin-top: auto;
+}
+
+.cta__link {
+  a {
+    display: block;
+  }
+}
+
+.card-group__footer {
+  margin-top: 1rem;
+}
+
+// Make room for slick arrows
+.card-group-wrapper {
+  margin: 0 25px;
+}
+
+.slick-slider {
+  // Slick slider overrides
+  .slick-prev,
+  .slick-next {
+    //height: auto;
+    //width: auto;
+
+    &:before {
+      color: #000;
+      //font-size: 32px;
+      //opacity: 1;
+    }
+  }
+
+  .slick-prev {
+    //@include breakpoint(medium) {
+    //  left: rem-calc(-41px);
+    //}
+    //left: -2rem;
+
+    &:before {
+      //content: "";
+    }
+  }
+
+  .slick-next {
+    //@include breakpoint(medium) {
+    //  right: rem-calc(-40px);
+    //}
+    //right: -2rem;
+
+    &:before {
+      //content: "";
+    }
+  }
+}

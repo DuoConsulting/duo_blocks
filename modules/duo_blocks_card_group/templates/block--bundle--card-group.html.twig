@@ -1,0 +1,73 @@
+{#
+/**
+ * @file
+ * Theme override to display a block -- card group.
+ *
+ */
+#}
+{%
+  set classes = [
+  'block',
+  'block--card-group',
+]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h3 {{ title_attributes }}>{{ label }}</h3>
+  {% endif %}
+  {{ title_suffix }}
+
+  {% set slider = false %}
+  {% set card_count = content.field_card_group_card['#items'].getvalue|length %}
+  {% if card_count > 3 %}
+    {% set slider = true %}
+  {% endif %}
+  {% if slider %}
+    {{ attach_library('duo_blocks_card_group/blocks-card-group-slick') }}
+  {% endif %}
+  {{ attach_library('duo_blocks_card_group/blocks-card-group') }}
+
+  {% if content.field_card_group_heading.0 or content.field_card_group_header_text.0 %}
+    <header class="card-group__header">
+      {% if content.field_card_group_heading.0 %}
+        <h2 class="card-group__heading">{{ content.field_card_group_heading.0 }}</h2>
+      {% endif %}
+
+      {% if content.field_card_group_header_text.0 %}
+        <div class="card-group__header-text">
+          {{ content.field_card_group_header_text.0 }}
+        </div>
+      {% endif %}
+    </header>
+  {% endif %}
+
+  {% if slider %}
+    <div class="card-group-wrapper">
+      <div class="card-group__cards slick">
+        {# Render the cards without all the wrapping markup. #}
+        {% for i in 0..(card_count - 1) %}
+          <div class="card-group__slick-element">
+            {{ content.field_card_group_card[i] }}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% else %}
+    <div class="card-group__cards">
+      {# Render the cards without all the wrapping markup. #}
+      {% for i in 0..(card_count - 1) %}
+        <div class="{{ card_size }}">
+          {{ content.field_card_group_card[i] }}
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  {% if content.field_card_group_footer_text.0 %}
+    <footer class="card-group__footer">
+      {{ content.field_card_group_footer_text.0 }}
+    </footer>
+  {% endif %}
+</div>
